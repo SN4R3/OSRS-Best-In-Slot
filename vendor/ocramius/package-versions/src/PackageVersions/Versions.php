@@ -54,7 +54,9 @@ final class Versions
   'zendframework/zend-code' => '3.3.0@6b1059db5b368db769e4392c6cb6cc139e56640d',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
   'symfony/dotenv' => 'v4.0.3@afb6923923e22874dac20bd042167ccb8df1d158',
-  '__root__' => 'No version set (parsed as 1.0.0)@',
+  'symfony/process' => 'v4.0.3@2145b3e8137e463b1051b79440a59b38220944f0',
+  'symfony/web-server-bundle' => 'v4.0.3@20ad52df8164d2eae029e6bb24356956c52380be',
+  '__root__' => 'dev-master@9d7b907401ac02b62749355ff8c4b6ad77392e6f',
 );
 
     private function __construct()

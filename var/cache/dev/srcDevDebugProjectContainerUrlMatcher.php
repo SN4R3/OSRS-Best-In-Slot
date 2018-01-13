@@ -30,8 +30,9 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
-        if ('/' === $pathinfo) {
-            throw new Symfony\Component\Routing\Exception\NoConfigurationException();
+        // item
+        if (0 === strpos($pathinfo, '/item') && preg_match('#^/item/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'item')), array (  '_controller' => 'App\\Controller\\ItemController::showAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
