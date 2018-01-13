@@ -25,7 +25,6 @@ class Item
      * @ORM\Column(type="integer")
      */
     private $req_id;
-
     /**
      * @ORM\Column(type="string")
     */
@@ -34,7 +33,13 @@ class Item
     /**
      * @ORM\Column(type="integer")
      */
+
     private $stats_id;
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\StatsReq", inversedBy="item")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $stats_req;
 
     /**
      * @ORM\Column(type="integer")
@@ -55,6 +60,14 @@ class Item
     * @ORM\Column(type="integer")
     */
     private $p2p;
+
+    public function getStatsReq(): StatsReq {
+        return $this->stats_req;
+    }
+
+    public function setStatsReq(StatsReq $sq) {
+        return $this->$stats_req = $sq;
+    }
 
     /**
      * Get the value of id

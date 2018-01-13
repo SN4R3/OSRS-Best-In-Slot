@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}OSRS Best In Slot!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link href="css/stylesheet.css" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+{% block body %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">OSRS | Best In Slot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content -->
+    <div id="osrsbis-container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-6">OSRS Item Check</h1>
+          <p class="lead">Get the best equipment for your money & skill levels.</p>
+          <ul class="list-unstyled">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<form method="POST" action="/go">
+    <div id="container">
+      <div id="lvl-inputs">
+        <div id="hiscore-container">
+          <input type="text" id="osrsName" placeholder="dragonslayer483"/>
+          <input type="submit" value="Look up"/>
+        </div>
+        <table>
+          <tr>
+            <td class="skill-input">
+                <img src="imgs/icon-att.png"><input type="number" name="att_lvl" value="99"/>
+            </td>
+            <td class="skill-input">
+                <img src="imgs/strength.png"><input type="number" name="str_lvl" value="99"/>
+            </td>
+          </tr>
+          <tr>
+              <td class="skill-input">
+                  <img src="imgs/defence.png"><input type="number" name="def_lvl" value="99"/>
+              </td>
+              <td class="skill-input">
+                  <img src="imgs/hitpoints.png"><input type="number" name="hp_lvl" value="99"/>
+              </td>
+            </tr>
+            <tr>
+                <td class="skill-input">
+                    <img src="imgs/magic.png"><input type="number" name="mag_lvl" value="99"/>
+                </td>
+                <td class="skill-input">
+                    <img src="imgs/ranged.png"><input type="number" name="ran_lvl" value="99"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="skill-input">
+                    <img src="imgs/prayer.png"><input type="number" name="pray_lvl" value="99"/>
+                </td>
+                <td class="skill-input">
+                    <img src="imgs/slayer.png"><input type="number" name="slay" value="99"/>
+                </td>
+            </tr>
+        </table>
+      </div>
+      <div>
+        <label for="totalBud">Total Budget:</label>  
+        <input type="text" id="totalBud" value="10.5m" name="totalBud"/>
+        <input type="submit" name="submit"/>
+        {{result}}
+      </div>
+      <div id="combat-bonus">
+        <h3 align="center">Combat Bonuses</h4>
+        <span>
+          <table>
+            <h4>Attack Bonus</h4>
+            <tr><td>Stab: </td><td id="att_stab">0</td></tr>
+            <tr><td>Slash: </td><td id="att_slash">0</td></tr>
+            <tr><td>Crush: </td><td id="att_crush">0</td></tr>
+            <tr><td>Magic: </td><td id="att_magic">0</td></tr>
+            <tr><td>Ranged: </td><td id="att_range">0</td></tr>
+          </table>
+          <table>
+              <h4>Defence Bonus</h4>
+              <tr><td>Stab: </td><td id="def_stab">0</td></tr>
+              <tr><td>Slash: </td><td id="def_slash">0</td></tr>
+              <tr><td>Crush: </td><td id="def_crush">0</td></tr>
+              <tr><td>Magic: </td><td id="def_magic">0</td></tr>
+              <tr><td>Ranged: </td><td id="def_range">0</td></tr>
+            </table>
+            <table>
+                <h4>Other Bonuses</h4>
+                <tr><td>Melee stregth: </td><td id="mel_str">0</td></tr>
+                <tr><td>Ranged stregth: </td><td id="rang_str">0</td></tr>
+                <tr><td>Magic damage: </td><td id="mag_str">0</td></tr>
+                <tr><td>Prayer: </td><td id="pray">0</td></tr>
+              </table>
+        </span>
+      </div>  
+    </div>
+</form>
+{% endblock %}
+    {% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    {% endblock %}
+    </body>
+</html>

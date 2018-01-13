@@ -1,0 +1,99 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+  }
+  
+  .flex-container>div {
+    background-color: DodgerBlue !important;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+  @font-face {
+
+    font-family: 'osrs' ;
+    src: url('../fonts/RuneScape-Chat.woff2') format('truetype');
+
+    }
+    /*remove the arrows from input[type=“number”]*/
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0; 
+  }
+    body {
+      color:white;
+      background-color:rgb(41, 50, 58);
+      padding-top: 54px;
+    }
+    @media (min-width: 992px) {
+      body {
+        padding-top: 56px;
+      }
+    }
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#container>div {
+  border:1px solid black;
+  margin: 10px;
+  font-size: 1.75vw;
+  flex:1;
+  background-color:rgb(42, 47, 51);
+  font-family: "osrs", sans-serif;
+}
+
+#hiscore-container {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom:3vh;
+  margin-left:4.2vw;
+}
+#hiscore-container input {
+  width:75%;
+}
+#lvl-inputs table {
+  padding:0 !important;
+}
+#lvl-inputs table tr {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding:2px;
+}
+
+.skill-input {
+  width:30%;
+  margin:1px;
+  border:1px solid transparent;
+  border-radius: 5px;
+  background-image: url("../imgs/input-bk.jpg");
+}
+.skill-input input {
+  width:40%;
+  margin-left:2vw;
+  border:none;
+  background-color: transparent;
+  color:yellow
+}
+.skill-input img {
+  width:30%;
+}
+
+#combat-bonus table td {
+  text-align: center !important
+}
+
+span table {
+  width:50%;
+
+}

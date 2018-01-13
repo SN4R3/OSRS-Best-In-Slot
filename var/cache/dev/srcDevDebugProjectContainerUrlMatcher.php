@@ -30,9 +30,37 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
-        // item
-        if (0 === strpos($pathinfo, '/item') && preg_match('#^/item/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'item')), array (  '_controller' => 'App\\Controller\\ItemController::showAction',));
+        // default
+        if ('' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'App\\Controller\\DefaultController::index',  '_route' => 'default',);
+            if (substr($pathinfo, -1) !== '/') {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'default'));
+            }
+
+            return $ret;
+        }
+
+        if (0 === strpos($pathinfo, '/item')) {
+            // app_item_finditems
+            if (preg_match('#^/item/(?P<skillLvls>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_item_finditems')), array (  '_controller' => 'App\\Controller\\ItemController::findItems',));
+            }
+
+            // item
+            if (preg_match('#^/item/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'item')), array (  '_controller' => 'App\\Controller\\ItemController::showAction',));
+            }
+
+        }
+
+        // app_logic_index
+        if ('/go' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\LogicController::index',  '_route' => 'app_logic_index',);
+        }
+
+        // _twig_error_test
+        if (0 === strpos($pathinfo, '/_error') && preg_match('#^/_error/(?P<code>\\d+)(?:\\.(?P<_format>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => '_twig_error_test')), array (  '_controller' => 'twig.controller.preview_error:previewErrorPageAction',  '_format' => 'html',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

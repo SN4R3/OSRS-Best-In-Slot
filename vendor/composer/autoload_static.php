@@ -16,6 +16,10 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
             'Zend\\EventManager\\' => 18,
             'Zend\\Code\\' => 10,
         ),
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -34,9 +38,12 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Component\\Asset\\' => 24,
             'Symfony\\Bundle\\WebServerBundle\\' => 31,
+            'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
+            'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\Doctrine\\' => 24,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
@@ -76,6 +83,10 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
         'Zend\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -141,9 +152,17 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'Symfony\\Component\\Asset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/asset',
+        ),
         'Symfony\\Bundle\\WebServerBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/web-server-bundle',
+        ),
+        'Symfony\\Bundle\\TwigBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bundle',
         ),
         'Symfony\\Bundle\\MakerBundle\\' => 
         array (
@@ -152,6 +171,10 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
         'Symfony\\Bundle\\FrameworkBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/framework-bundle',
+        ),
+        'Symfony\\Bridge\\Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bridge',
         ),
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
@@ -232,6 +255,13 @@ class ComposerStaticInita6697499c10db4fad5fd43afb519f542
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'ProxyManager\\' => 
