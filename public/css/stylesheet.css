@@ -63,6 +63,7 @@
 }
 #lvl-inputs table {
   padding:0 !important;
+  margin-bottom:2vh;
 }
 #lvl-inputs table tr {
   display: inline-flex;
@@ -95,5 +96,59 @@
 
 span table {
   width:50%;
-
 }
+
+#worn-equip {
+  display:flex;
+  width:80%;
+  margin-left:3vw;
+}
+
+#worn-equip td {
+  width:3%;
+  flex:1;
+}
+#bis-stat-choose {
+  margin-top:2vh;
+  width:100%;
+}
+#bis-stat-choose tr {
+  display:flex;
+  width:100%;
+}
+#bis-stat-choose td {
+  flex:1;
+  border:1px solid transparent;
+  border-radius: 5px;
+  background-image: url("../imgs/input-bk.jpg");
+  margin:0.5vw;
+  padding:0 15px 0 15px;
+}
+
+.blank-td {
+  background-image:none !important;
+}
+
+#bis-stat-choose td label img {
+  width:100%;
+  margin-left:4px;
+}
+
+#bis-stat-choose td input {
+  visibility: hidden;
+  position: absolute; 
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+#bis-stat-choose td input:checked +img { 
+  border:2px solid #f00 !important;
+}
+.btn-group {
+  width:100% !important;
+}
+
+.btn-group label {
+  width:50% !important;
+}
+

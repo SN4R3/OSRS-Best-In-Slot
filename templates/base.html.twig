@@ -91,12 +91,108 @@
                 </td>
             </tr>
         </table>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input type="radio" name="bis-att-def" id="att" checked="checked"> Attack
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="bis-att-def" id="def" autocomplete="off"> Defence
+          </label>
+        </div>
+        <table id="bis-stat-choose">
+          <tr>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="stab" value="stab"/>
+                <img src="imgs/stab.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="slash" value="slash"/>
+                <img src="imgs/slash.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="crush" value="crush"/>
+                <img src="imgs/crush.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="range" value="range"/>
+                <img src="imgs/ranged.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="magic" value="magic"/>
+                <img src="imgs/magic.png"/>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td class="blank-td">
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="str" value="mel_str"/>
+                <img src="imgs/strength.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="ran_str-str" value="ran_str"/>
+                <img src="imgs/ranged-strength.png"/>
+              </label>
+            </td>
+            <td>
+              <label>
+                <input type="radio" name="bis-stats-chose" id="mag_str" value="mag_str"/>
+                <img src="imgs/magic-damage.png"/>
+              </label>
+            </td>
+            <td class="blank-td">
+            </td>
+          </tr>
+        </table>
       </div>
       <div>
+        <table id="worn-equip">
+          <tr>
+            <td></td>
+            <td><img src="imgs/Head_slot.png" width="100%"/></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><img src="imgs/Cape_slot.png" width="100%"/></td>
+            <td><img src="imgs/Neck_slot.png" width="100%"/></td>
+            <td><img src="imgs/Ammo_slot.png" width="100%"/></td>
+          </tr>
+          <tr>
+            <td><img src="imgs/Weapon_slot.png" width="100%"/></td>
+            <td><img src="imgs/Torso_slot.png" width="100%"/></td>
+            <td><img src="imgs/Shield_slot.png" width="100%"/></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><img src="imgs/Legs_slot.png" width="100%"/></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><img src="imgs/Gloves_slot.png" width="100%"/></td>
+            <td><img src="imgs/Boots_slot.png" width="100%"/></td>
+            <td><img src="imgs/Ring_slot.png" width="100%"/></td>
+          </tr>
+        </table>
+        <br/>
         <label for="totalBud">Total Budget:</label>  
         <input type="text" id="totalBud" value="10.5m" name="totalBud"/>
         <input type="submit" name="submit"/>
-        {{result}}
+        {% for row in result %}
+          {{ row.item_name }}
+        {% endfor %}
       </div>
       <div id="combat-bonus">
         <h3 align="center">Combat Bonuses</h4>
@@ -133,6 +229,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(()=>{
+      });
+    </script>
     {% endblock %}
     </body>
 </html>
