@@ -7,29 +7,37 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ItemController extends Controller
 {
     /**
-     * @Route("/item", name="item")
+     * @Route("/go")
      */
-    public function index() {
-        return new Response('Welcome to your new controller!');
+    public function index(Request $request) {
+        $dataRef = $request->request->get('data');
+
+        //$errMsg = self::validateForm();
+        $skillLvls = $dataRef[0];
+        $budget = $dataRef[2];
+        $bonus = array(
+            "type" => $dataRef[1],
+            "bonus" => $dataRef[1]
+        );
+        
+        return new JsonResponse(self::findItems($skillLvls,$bonus));
     }
-    /**
-     * @Route ("/item/{skillLvls}")
-     */
+
     public function findItems($skillLvls,$bonus) {
-        $result = $this->getDoctrine()
+        $allItems = $this->getDoctrine()
             ->getRepository(Item::class)
             ->getAllItems();
         
         //Filter items
-        $result = self::filterItemsByLvl($result, $skillLvls);
-        $result = self::filterItemsByBonus($result, $bonus);
+        $result = self::filterItemsByLvl($allItems, $skillLvls);
+        //$result = self::filterItemsByBonus($allItems, $skillLvls);
 
-        //Render result
-        return $this->render('base.html.twig', ['result'=>$result]);
+        return $result;
     }
 
     /**
@@ -54,25 +62,25 @@ class ItemController extends Controller
         $result = array();
         foreach($items as $row) {
             $booOk = true;//User's lvls meet the items requirements
-            if($row["att"] > $skillLvls["att_lvl"]) {
+            if($row["att"] > $skillLvls[0][1]) {
                 $booOk = false;
             }
-            if($row["str"] > $skillLvls["str_lvl"]) {
+            if($row["str"] > $skillLvls[1][1]) {
                 $booOk = false;
             }
-            if($row["def"] > $skillLvls["def_lvl"]) {
+            if($row["def"] >  $skillLvls[2][1]) {
                 $booOk = false;
             }
-            if($row["rang"] > $skillLvls["ran_lvl"]) {
+            if($row["rang"] >  $skillLvls[3][1]) {
                 $booOk = false;
             }
-            if($row["pray"] > $skillLvls["pray_lvl"]) {
+            if($row["pray"] >  $skillLvls[4][1]) {
                 $booOk = false;
             }
-            if($row["mage"] > $skillLvls["mag_lvl"]) {
+            if($row["mage"] >  $skillLvls[5][1]) {
                 $booOk = false;
             }
-            if($booOk)
+            if($booOk) 
                 array_push($result, $row);        
         }
         return $result;

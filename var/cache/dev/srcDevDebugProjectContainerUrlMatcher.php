@@ -40,21 +40,18 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $ret;
         }
 
-        if (0 === strpos($pathinfo, '/item')) {
-            // app_item_finditems
-            if (preg_match('#^/item/(?P<skillLvls>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_item_finditems')), array (  '_controller' => 'App\\Controller\\ItemController::findItems',));
-            }
+        // app_item_index
+        if ('/go' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\ItemController::index',  '_route' => 'app_item_index',);
+        }
 
-            // item
-            if (preg_match('#^/item/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'item')), array (  '_controller' => 'App\\Controller\\ItemController::showAction',));
-            }
-
+        // item
+        if (0 === strpos($pathinfo, '/item') && preg_match('#^/item/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'item')), array (  '_controller' => 'App\\Controller\\ItemController::showAction',));
         }
 
         // app_logic_index
-        if ('/go' === $pathinfo) {
+        if ('/l/m/a/o' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\LogicController::index',  '_route' => 'app_logic_index',);
         }
 

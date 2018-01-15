@@ -19,8 +19,8 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a67b11c3d7dd2c29184fcd5cc68264b9665fcfe82c8825dd4915cb530687cfe9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a67b11c3d7dd2c29184fcd5cc68264b9665fcfe82c8825dd4915cb530687cfe9->enter($__internal_a67b11c3d7dd2c29184fcd5cc68264b9665fcfe82c8825dd4915cb530687cfe9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_86f63e0ac211d1d22328d2e1dc241a4566000f96c6a3f1d75f0f938b9e1318c8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_86f63e0ac211d1d22328d2e1dc241a4566000f96c6a3f1d75f0f938b9e1318c8->enter($__internal_86f63e0ac211d1d22328d2e1dc241a4566000f96c6a3f1d75f0f938b9e1318c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -43,47 +43,47 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         // line 228
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 237
+        // line 292
         echo "    </body>
 </html>
 ";
         
-        $__internal_a67b11c3d7dd2c29184fcd5cc68264b9665fcfe82c8825dd4915cb530687cfe9->leave($__internal_a67b11c3d7dd2c29184fcd5cc68264b9665fcfe82c8825dd4915cb530687cfe9_prof);
+        $__internal_86f63e0ac211d1d22328d2e1dc241a4566000f96c6a3f1d75f0f938b9e1318c8->leave($__internal_86f63e0ac211d1d22328d2e1dc241a4566000f96c6a3f1d75f0f938b9e1318c8_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a7e83695b735a9aee3402260685cff800894c0f1ea8f6eeea4a5a458a7986e52 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a7e83695b735a9aee3402260685cff800894c0f1ea8f6eeea4a5a458a7986e52->enter($__internal_a7e83695b735a9aee3402260685cff800894c0f1ea8f6eeea4a5a458a7986e52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8567fba357155799a072d409b267fc4de5ca9ae7600ed487066042baac55e957 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8567fba357155799a072d409b267fc4de5ca9ae7600ed487066042baac55e957->enter($__internal_8567fba357155799a072d409b267fc4de5ca9ae7600ed487066042baac55e957_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "OSRS Best In Slot!";
         
-        $__internal_a7e83695b735a9aee3402260685cff800894c0f1ea8f6eeea4a5a458a7986e52->leave($__internal_a7e83695b735a9aee3402260685cff800894c0f1ea8f6eeea4a5a458a7986e52_prof);
+        $__internal_8567fba357155799a072d409b267fc4de5ca9ae7600ed487066042baac55e957->leave($__internal_8567fba357155799a072d409b267fc4de5ca9ae7600ed487066042baac55e957_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_655a7b9f19b93df2e70b397aece86fb7920e6f72752fb8ff816903ec06accfdd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_655a7b9f19b93df2e70b397aece86fb7920e6f72752fb8ff816903ec06accfdd->enter($__internal_655a7b9f19b93df2e70b397aece86fb7920e6f72752fb8ff816903ec06accfdd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7f49f65ef7169f57f876a5f46f1e22a4e27748b5b7e67b97ec268c91abc8e7b1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7f49f65ef7169f57f876a5f46f1e22a4e27748b5b7e67b97ec268c91abc8e7b1->enter($__internal_7f49f65ef7169f57f876a5f46f1e22a4e27748b5b7e67b97ec268c91abc8e7b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css\" integrity=\"sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy\" crossorigin=\"anonymous\">
         <link href=\"css/stylesheet.css\" rel=\"stylesheet\">
         ";
         
-        $__internal_655a7b9f19b93df2e70b397aece86fb7920e6f72752fb8ff816903ec06accfdd->leave($__internal_655a7b9f19b93df2e70b397aece86fb7920e6f72752fb8ff816903ec06accfdd_prof);
+        $__internal_7f49f65ef7169f57f876a5f46f1e22a4e27748b5b7e67b97ec268c91abc8e7b1->leave($__internal_7f49f65ef7169f57f876a5f46f1e22a4e27748b5b7e67b97ec268c91abc8e7b1_prof);
 
     }
 
     // line 12
     public function block_body($context, array $blocks = array())
     {
-        $__internal_57f0727639fceb469c43dd6c53fe1a76ebce29b5f5df72a795920621cffccb49 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_57f0727639fceb469c43dd6c53fe1a76ebce29b5f5df72a795920621cffccb49->enter($__internal_57f0727639fceb469c43dd6c53fe1a76ebce29b5f5df72a795920621cffccb49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_487f3773ae306d794f6e8364af04f963b9dc4569a517acd78e873c4534b704a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_487f3773ae306d794f6e8364af04f963b9dc4569a517acd78e873c4534b704a2->enter($__internal_487f3773ae306d794f6e8364af04f963b9dc4569a517acd78e873c4534b704a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
         echo "    <!-- Navigation -->
@@ -126,7 +126,6 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         </div>
       </div>
     </div>
-<form method=\"POST\" action=\"/go\">
     <div id=\"container\">
       <div id=\"lvl-inputs\">
         <div id=\"hiscore-container\">
@@ -136,43 +135,43 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         <table>
           <tr>
             <td class=\"skill-input\">
-                <img src=\"imgs/icon-att.png\"><input type=\"number\" name=\"att_lvl\" value=\"99\"/>
+                <img src=\"imgs/icon-att.png\"><input type=\"number\" id=\"att_lvl\" name=\"att_lvl\" value=\"99\"/>
             </td>
             <td class=\"skill-input\">
-                <img src=\"imgs/strength.png\"><input type=\"number\" name=\"str_lvl\" value=\"99\"/>
+                <img src=\"imgs/strength.png\"><input type=\"number\" id=\"str_lvl\" name=\"str_lvl\" value=\"99\"/>
             </td>
           </tr>
           <tr>
               <td class=\"skill-input\">
-                  <img src=\"imgs/defence.png\"><input type=\"number\" name=\"def_lvl\" value=\"99\"/>
+                  <img src=\"imgs/defence.png\"><input type=\"number\" id=\"def_lvl\" name=\"def_lvl\" value=\"99\"/>
               </td>
               <td class=\"skill-input\">
-                  <img src=\"imgs/hitpoints.png\"><input type=\"number\" name=\"hp_lvl\" value=\"99\"/>
+                  <img src=\"imgs/hitpoints.png\"><input type=\"number\" id=\"hp_lvl\" name=\"hp_lvl\" value=\"99\"/>
               </td>
             </tr>
             <tr>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/magic.png\"><input type=\"number\" name=\"mag_lvl\" value=\"99\"/>
+                    <img src=\"imgs/magic.png\"><input type=\"number\" id=\"mag_lvl\" name=\"mag_lvl\" value=\"99\"/>
                 </td>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/ranged.png\"><input type=\"number\" name=\"ran_lvl\" value=\"99\"/>
+                    <img src=\"imgs/ranged.png\"><input type=\"number\" id=\"ran_lvl\" name=\"ran_lvl\" value=\"99\"/>
                 </td>
             </tr>
             <tr>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/prayer.png\"><input type=\"number\" name=\"pray_lvl\" value=\"99\"/>
+                    <img src=\"imgs/prayer.png\"><input type=\"number\" id=\"pray_lvl\" ame=\"pray_lvl\" value=\"99\"/>
                 </td>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/slayer.png\"><input type=\"number\" name=\"slay\" value=\"99\"/>
+                    <img src=\"imgs/slayer.png\"><input type=\"number\" id=\"slay\" name=\"slay\" value=\"99\"/>
                 </td>
             </tr>
         </table>
         <div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">
           <label class=\"btn btn-secondary\">
-            <input type=\"radio\" name=\"bis-att-def\" id=\"att\" checked=\"checked\"> Attack
+            <input type=\"radio\" name=\"bis-att-def\" id=\"att\" checked=\"checked\" value=\"att\"> Attack
           </label>
           <label class=\"btn btn-secondary\">
-            <input type=\"radio\" name=\"bis-att-def\" id=\"def\" autocomplete=\"off\"> Defence
+            <input type=\"radio\" name=\"bis-att-def\" id=\"def\" autocomplete=\"off\" value=\"def\"> Defence
           </label>
         </div>
         <table id=\"bis-stat-choose\">
@@ -265,13 +264,15 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         <br/>
         <label for=\"totalBud\">Total Budget:</label>  
         <input type=\"text\" id=\"totalBud\" value=\"10.5m\" name=\"totalBud\"/>
-        <input type=\"submit\" name=\"submit\"/>
+        <br/>
+        <br/>
+        <input type=\"submit\" id=\"go\" name=\"submit\" value=\"Go\" style=\"width:100%\"/>
         ";
-        // line 193
+        // line 194
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new Twig_Error_Runtime('Variable "result" does not exist.', 193, $this->getSourceContext()); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new Twig_Error_Runtime('Variable "result" does not exist.', 194, $this->getSourceContext()); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-            // line 194
+            // line 195
             echo "          ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["row"], "item_name", array()), "html", null, true);
             echo "
@@ -280,7 +281,7 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 196
+        // line 197
         echo "      </div>
       <div id=\"combat-bonus\">
         <h3 align=\"center\">Combat Bonuses</h4>
@@ -311,30 +312,84 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         </span>
       </div>  
     </div>
-</form>
 ";
         
-        $__internal_57f0727639fceb469c43dd6c53fe1a76ebce29b5f5df72a795920621cffccb49->leave($__internal_57f0727639fceb469c43dd6c53fe1a76ebce29b5f5df72a795920621cffccb49_prof);
+        $__internal_487f3773ae306d794f6e8364af04f963b9dc4569a517acd78e873c4534b704a2->leave($__internal_487f3773ae306d794f6e8364af04f963b9dc4569a517acd78e873c4534b704a2_prof);
 
     }
 
     // line 228
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b554710b34d0b18fa05913e8ba44eabbe789c9e8f6079056a0b3126f20fde005 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b554710b34d0b18fa05913e8ba44eabbe789c9e8f6079056a0b3126f20fde005->enter($__internal_b554710b34d0b18fa05913e8ba44eabbe789c9e8f6079056a0b3126f20fde005_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_2215b075c68c482b2b0b875b0633276f7e82273e5dd22ac093505e0db4bef2c6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2215b075c68c482b2b0b875b0633276f7e82273e5dd22ac093505e0db4bef2c6->enter($__internal_2215b075c68c482b2b0b875b0633276f7e82273e5dd22ac093505e0db4bef2c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 229
-        echo "    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+        echo "    <script src=\"https://code.jquery.com/jquery-3.2.1.js\" integrity=\"sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=\"crossorigin=\"anonymous\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js\" integrity=\"sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4\" crossorigin=\"anonymous\"></script>
     <script>
-      \$(document).ready(()=>{
+      \$(document).ready(() => {
+          //Get skill lvl inputs via their parents
+          \$('#go').on('click', () => {
+              var err = validateForm();
+              if (err.length < 1) {
+                  var skillInputs = [];
+                  var bonusAttDef = {
+                      type: \"\",
+                      bonus: \"\"
+                  }
+                  var budget = 0;
+                  \$('.skill-input').each(function() {
+                      skillInputs.push(new Array(\$(this).children(\"input\").attr(\"id\"), \$(this).children(\"input\").val()));
+                  });
+                  bonusAttDef.type = \$(\"input[name='bis-att-def']:checked\").val();
+                  bonusAttDef.bonus = \$(\"input[name='bis-stats-chose']:checked\").val();
+                  totalBud = \$('#totalBud').val();
+
+                  var data = [];
+                  data.push(skillInputs);
+                  data.push(bonusAttDef);
+                  data.push(totalBud);
+
+                  \$.ajax({
+                      url: '/go',
+                      type: 'POST',
+                      data: {
+                          \"data\": data
+                      },
+                      async: true,
+                      success: function(resp) {
+                          console.log(resp);
+
+                      },
+                      error: function(errorMsg, status) {
+                          console.log(status);
+                      }
+                  });
+              } else {
+                console.log(err);
+              }
+
+              function validateForm() {
+                let err = \"\";
+                let bonusChosen = \$(\"input[name='bis-stats-chose']:checked\");
+                if(bonusChosen == 'undefined') {
+                  err = \"Please choose a bonus\";
+                } else if(bonusChosen.val().substring(bonusChosen.val().length - 3, bonusChosen.val().length) !== \"lvl\") {
+                    //Checked if user selected \"Melee, ranged or Magic Strength\"
+                    if(\$(\"input[name='bis-stats-chose']:checked\").val().length < 1) {
+                      err = \"Please check 'Attack or Defence'\";
+                    }
+                  }
+                return err;
+              }
+          });
       });
     </script>
     ";
         
-        $__internal_b554710b34d0b18fa05913e8ba44eabbe789c9e8f6079056a0b3126f20fde005->leave($__internal_b554710b34d0b18fa05913e8ba44eabbe789c9e8f6079056a0b3126f20fde005_prof);
+        $__internal_2215b075c68c482b2b0b875b0633276f7e82273e5dd22ac093505e0db4bef2c6->leave($__internal_2215b075c68c482b2b0b875b0633276f7e82273e5dd22ac093505e0db4bef2c6_prof);
 
     }
 
@@ -345,7 +400,7 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
 
     public function getDebugInfo()
     {
-        return array (  328 => 229,  322 => 228,  284 => 196,  275 => 194,  271 => 193,  89 => 13,  83 => 12,  74 => 7,  68 => 6,  56 => 5,  47 => 237,  44 => 228,  42 => 12,  38 => 10,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  328 => 229,  322 => 228,  285 => 197,  276 => 195,  272 => 194,  89 => 13,  83 => 12,  74 => 7,  68 => 6,  56 => 5,  47 => 292,  44 => 228,  42 => 12,  38 => 10,  36 => 6,  32 => 5,  26 => 1,);
     }
 
     public function getSourceContext()
@@ -402,7 +457,6 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         </div>
       </div>
     </div>
-<form method=\"POST\" action=\"/go\">
     <div id=\"container\">
       <div id=\"lvl-inputs\">
         <div id=\"hiscore-container\">
@@ -412,43 +466,43 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         <table>
           <tr>
             <td class=\"skill-input\">
-                <img src=\"imgs/icon-att.png\"><input type=\"number\" name=\"att_lvl\" value=\"99\"/>
+                <img src=\"imgs/icon-att.png\"><input type=\"number\" id=\"att_lvl\" name=\"att_lvl\" value=\"99\"/>
             </td>
             <td class=\"skill-input\">
-                <img src=\"imgs/strength.png\"><input type=\"number\" name=\"str_lvl\" value=\"99\"/>
+                <img src=\"imgs/strength.png\"><input type=\"number\" id=\"str_lvl\" name=\"str_lvl\" value=\"99\"/>
             </td>
           </tr>
           <tr>
               <td class=\"skill-input\">
-                  <img src=\"imgs/defence.png\"><input type=\"number\" name=\"def_lvl\" value=\"99\"/>
+                  <img src=\"imgs/defence.png\"><input type=\"number\" id=\"def_lvl\" name=\"def_lvl\" value=\"99\"/>
               </td>
               <td class=\"skill-input\">
-                  <img src=\"imgs/hitpoints.png\"><input type=\"number\" name=\"hp_lvl\" value=\"99\"/>
+                  <img src=\"imgs/hitpoints.png\"><input type=\"number\" id=\"hp_lvl\" name=\"hp_lvl\" value=\"99\"/>
               </td>
             </tr>
             <tr>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/magic.png\"><input type=\"number\" name=\"mag_lvl\" value=\"99\"/>
+                    <img src=\"imgs/magic.png\"><input type=\"number\" id=\"mag_lvl\" name=\"mag_lvl\" value=\"99\"/>
                 </td>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/ranged.png\"><input type=\"number\" name=\"ran_lvl\" value=\"99\"/>
+                    <img src=\"imgs/ranged.png\"><input type=\"number\" id=\"ran_lvl\" name=\"ran_lvl\" value=\"99\"/>
                 </td>
             </tr>
             <tr>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/prayer.png\"><input type=\"number\" name=\"pray_lvl\" value=\"99\"/>
+                    <img src=\"imgs/prayer.png\"><input type=\"number\" id=\"pray_lvl\" ame=\"pray_lvl\" value=\"99\"/>
                 </td>
                 <td class=\"skill-input\">
-                    <img src=\"imgs/slayer.png\"><input type=\"number\" name=\"slay\" value=\"99\"/>
+                    <img src=\"imgs/slayer.png\"><input type=\"number\" id=\"slay\" name=\"slay\" value=\"99\"/>
                 </td>
             </tr>
         </table>
         <div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">
           <label class=\"btn btn-secondary\">
-            <input type=\"radio\" name=\"bis-att-def\" id=\"att\" checked=\"checked\"> Attack
+            <input type=\"radio\" name=\"bis-att-def\" id=\"att\" checked=\"checked\" value=\"att\"> Attack
           </label>
           <label class=\"btn btn-secondary\">
-            <input type=\"radio\" name=\"bis-att-def\" id=\"def\" autocomplete=\"off\"> Defence
+            <input type=\"radio\" name=\"bis-att-def\" id=\"def\" autocomplete=\"off\" value=\"def\"> Defence
           </label>
         </div>
         <table id=\"bis-stat-choose\">
@@ -541,7 +595,9 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         <br/>
         <label for=\"totalBud\">Total Budget:</label>  
         <input type=\"text\" id=\"totalBud\" value=\"10.5m\" name=\"totalBud\"/>
-        <input type=\"submit\" name=\"submit\"/>
+        <br/>
+        <br/>
+        <input type=\"submit\" id=\"go\" name=\"submit\" value=\"Go\" style=\"width:100%\"/>
         {% for row in result %}
           {{ row.item_name }}
         {% endfor %}
@@ -575,14 +631,68 @@ class __TwigTemplate_6fd77ec57e8ea38fb6d0fd910a35130ec8a283833106810d86d8f168db2
         </span>
       </div>  
     </div>
-</form>
 {% endblock %}
     {% block javascripts %}
-    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://code.jquery.com/jquery-3.2.1.js\" integrity=\"sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=\"crossorigin=\"anonymous\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js\" integrity=\"sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4\" crossorigin=\"anonymous\"></script>
     <script>
-      \$(document).ready(()=>{
+      \$(document).ready(() => {
+          //Get skill lvl inputs via their parents
+          \$('#go').on('click', () => {
+              var err = validateForm();
+              if (err.length < 1) {
+                  var skillInputs = [];
+                  var bonusAttDef = {
+                      type: \"\",
+                      bonus: \"\"
+                  }
+                  var budget = 0;
+                  \$('.skill-input').each(function() {
+                      skillInputs.push(new Array(\$(this).children(\"input\").attr(\"id\"), \$(this).children(\"input\").val()));
+                  });
+                  bonusAttDef.type = \$(\"input[name='bis-att-def']:checked\").val();
+                  bonusAttDef.bonus = \$(\"input[name='bis-stats-chose']:checked\").val();
+                  totalBud = \$('#totalBud').val();
+
+                  var data = [];
+                  data.push(skillInputs);
+                  data.push(bonusAttDef);
+                  data.push(totalBud);
+
+                  \$.ajax({
+                      url: '/go',
+                      type: 'POST',
+                      data: {
+                          \"data\": data
+                      },
+                      async: true,
+                      success: function(resp) {
+                          console.log(resp);
+
+                      },
+                      error: function(errorMsg, status) {
+                          console.log(status);
+                      }
+                  });
+              } else {
+                console.log(err);
+              }
+
+              function validateForm() {
+                let err = \"\";
+                let bonusChosen = \$(\"input[name='bis-stats-chose']:checked\");
+                if(bonusChosen == 'undefined') {
+                  err = \"Please choose a bonus\";
+                } else if(bonusChosen.val().substring(bonusChosen.val().length - 3, bonusChosen.val().length) !== \"lvl\") {
+                    //Checked if user selected \"Melee, ranged or Magic Strength\"
+                    if(\$(\"input[name='bis-stats-chose']:checked\").val().length < 1) {
+                      err = \"Please check 'Attack or Defence'\";
+                    }
+                  }
+                return err;
+              }
+          });
       });
     </script>
     {% endblock %}

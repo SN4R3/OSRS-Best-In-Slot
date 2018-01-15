@@ -5,36 +5,17 @@ namespace App\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class LogicController extends Controller
 {
     /**
-     * @Route("/go")
+     * @Route("l/m/a/o")
      */
 
     public function index() {
-        $errMsg = self::validateForm();
-        if(strlen($errMsg) > 1) {
-            return $this->render('base.html.twig', ['result'=>$errMsg]);
-        }
-        $skillLvls = array();
-        $budget = $_POST["totalBud"];
-        $bonus = array(
-            "type" => $_POST["bis-att-def"],
-            "bonus" => $_POST["bis-stats-chose"]
-        );
-        //Get all the user's skill levels
-        foreach($_POST as $key => $value) {
-            $keyword = substr($key, strlen($key)-3, strlen($key));
-            if($keyword === "lvl") {
-                $skillLvls[$key] = $value;
-            }
-        } 
-        $itemsFiltered = $this->forward('App\Controller\ItemController::findItems', array(
-            'skillLvls'=>$skillLvls,
-            'bonus'=>$bonus
-        ));
-        return new Response($itemsFiltered);
+        return new Response("Hey lmao");
     }
 
     public function validateForm() {

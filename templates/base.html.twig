@@ -50,7 +50,6 @@
         </div>
       </div>
     </div>
-<form method="POST" action="/go">
     <div id="container">
       <div id="lvl-inputs">
         <div id="hiscore-container">
@@ -60,43 +59,43 @@
         <table>
           <tr>
             <td class="skill-input">
-                <img src="imgs/icon-att.png"><input type="number" name="att_lvl" value="99"/>
+                <img src="imgs/icon-att.png"><input type="number" id="att_lvl" name="att_lvl" value="99"/>
             </td>
             <td class="skill-input">
-                <img src="imgs/strength.png"><input type="number" name="str_lvl" value="99"/>
+                <img src="imgs/strength.png"><input type="number" id="str_lvl" name="str_lvl" value="99"/>
             </td>
           </tr>
           <tr>
               <td class="skill-input">
-                  <img src="imgs/defence.png"><input type="number" name="def_lvl" value="99"/>
+                  <img src="imgs/defence.png"><input type="number" id="def_lvl" name="def_lvl" value="99"/>
               </td>
               <td class="skill-input">
-                  <img src="imgs/hitpoints.png"><input type="number" name="hp_lvl" value="99"/>
+                  <img src="imgs/hitpoints.png"><input type="number" id="hp_lvl" name="hp_lvl" value="99"/>
               </td>
             </tr>
             <tr>
                 <td class="skill-input">
-                    <img src="imgs/magic.png"><input type="number" name="mag_lvl" value="99"/>
+                    <img src="imgs/magic.png"><input type="number" id="mag_lvl" name="mag_lvl" value="99"/>
                 </td>
                 <td class="skill-input">
-                    <img src="imgs/ranged.png"><input type="number" name="ran_lvl" value="99"/>
+                    <img src="imgs/ranged.png"><input type="number" id="ran_lvl" name="ran_lvl" value="99"/>
                 </td>
             </tr>
             <tr>
                 <td class="skill-input">
-                    <img src="imgs/prayer.png"><input type="number" name="pray_lvl" value="99"/>
+                    <img src="imgs/prayer.png"><input type="number" id="pray_lvl" ame="pray_lvl" value="99"/>
                 </td>
                 <td class="skill-input">
-                    <img src="imgs/slayer.png"><input type="number" name="slay" value="99"/>
+                    <img src="imgs/slayer.png"><input type="number" id="slay" name="slay" value="99"/>
                 </td>
             </tr>
         </table>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label class="btn btn-secondary">
-            <input type="radio" name="bis-att-def" id="att" checked="checked"> Attack
+            <input type="radio" name="bis-att-def" id="att" checked="checked" value="att"> Attack
           </label>
           <label class="btn btn-secondary">
-            <input type="radio" name="bis-att-def" id="def" autocomplete="off"> Defence
+            <input type="radio" name="bis-att-def" id="def" autocomplete="off" value="def"> Defence
           </label>
         </div>
         <table id="bis-stat-choose">
@@ -189,7 +188,9 @@
         <br/>
         <label for="totalBud">Total Budget:</label>  
         <input type="text" id="totalBud" value="10.5m" name="totalBud"/>
-        <input type="submit" name="submit"/>
+        <br/>
+        <br/>
+        <input type="submit" id="go" name="submit" value="Go" style="width:100%"/>
         {% for row in result %}
           {{ row.item_name }}
         {% endfor %}
@@ -223,14 +224,68 @@
         </span>
       </div>  
     </div>
-</form>
 {% endblock %}
     {% block javascripts %}
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script>
-      $(document).ready(()=>{
+      $(document).ready(() => {
+          //Get skill lvl inputs via their parents
+          $('#go').on('click', () => {
+              var err = validateForm();
+              if (err.length < 1) {
+                  var skillInputs = [];
+                  var bonusAttDef = {
+                      type: "",
+                      bonus: ""
+                  }
+                  var budget = 0;
+                  $('.skill-input').each(function() {
+                      skillInputs.push(new Array($(this).children("input").attr("id"), $(this).children("input").val()));
+                  });
+                  bonusAttDef.type = $("input[name='bis-att-def']:checked").val();
+                  bonusAttDef.bonus = $("input[name='bis-stats-chose']:checked").val();
+                  totalBud = $('#totalBud').val();
+
+                  var data = [];
+                  data.push(skillInputs);
+                  data.push(bonusAttDef);
+                  data.push(totalBud);
+
+                  $.ajax({
+                      url: '/go',
+                      type: 'POST',
+                      data: {
+                          "data": data
+                      },
+                      async: true,
+                      success: function(resp) {
+                          console.log(resp);
+
+                      },
+                      error: function(errorMsg, status) {
+                          console.log(status);
+                      }
+                  });
+              } else {
+                console.log(err);
+              }
+
+              function validateForm() {
+                let err = "";
+                /*let bonusChosen = $("input[name='bis-stats-chose']:checked");
+                if(bonusChosen == 'undefined') {
+                  err = "Please choose a bonus";
+                } else if(bonusChosen.val().substring(bonusChosen.val().length - 3, bonusChosen.val().length) !== "lvl") {
+                    //Checked if user selected "Melee, ranged or Magic Strength"
+                    if($("input[name='bis-stats-chose']:checked").val().length < 1) {
+                      err = "Please check 'Attack or Defence'";
+                    }
+                  }*/
+                return err;
+              }
+          });
       });
     </script>
     {% endblock %}
